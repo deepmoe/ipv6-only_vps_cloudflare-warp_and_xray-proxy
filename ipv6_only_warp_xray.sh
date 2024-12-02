@@ -55,10 +55,8 @@ echo -e "\033[1;36;45mCloudFlare-Warp installation in process.\033[0m"
 curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
 sudo apt-get update && sudo apt-get install cloudflare-warp
-while ! systemctl is-active --quiet warp-svc.service; do
-    echo -e "\033[1;36;45mWait for warp-svc.service to get started.\033[0m"
-    sleep 1
-done
+echo -e "\033[1;36;45mWait for warp daemon to get started.\033[0m"
+sleep 36
 
 ## Registering CloudFlare-Warp
 echo -e "\033[1;36;45mNew warp registration in process.\033[0m"
