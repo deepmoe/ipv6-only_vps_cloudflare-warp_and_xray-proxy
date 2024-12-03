@@ -7,7 +7,7 @@ Please note that the script only supports Ubuntu and Debian. Moreover, I only te
 
 And if you place the problem like "How to access Github without IPv6", you will be recommended to download it and then upload it to your IPv6-only VPS via SFTP/FTP. 
 
-Furthermore, warp service will listen on port: 40000 by default, used as the outbound target for the Xray service. And you can also refer to the official Xray documentation for guidance on manually modifying its configuration. 
+Furthermore, warp service will listen on port: 40000 by default, used as the outbound target for the Xray service. And you can also refer to the official Xray documentation for guidance on manually modifying its inbound configuration. 
 
 
 
@@ -20,4 +20,4 @@ Furthermore, warp service will listen on port: 40000 by default, used as the out
 
 可通过SFTP/FTP将此脚本上传至IPv6-only VPS，再进一步执行。
 
-此外，warp服务默认监听40000端口，Xray服务出站将指向该端口。安装完成后，可以参考Xray官方文档手动更改Xray的配置。
+此外，warp服务默认监听40000端口，Xray服务出站将指向该端口。安装完成后，可以参考Xray官方文档手动更改Xray的入站配置。
